@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Các số nguyên dương bé hơn n</title>
+    </head>
+    <body>
+        <h1>Liệt kê các số nguyên dương bé hơn n</h1>
+        Nhập n: <input type="number" id="n" placeholder="n là số nguyên dương">
+        <br>
+        <button onclick="list()">Xuất mảng</button>
+        <br>
+        <span id="result"></span>
+        <script>
+            function list(){
+                let n = document.getElementById("n").value;
+                let arr = [];
+                for(let i = 1; i<n;i++){
+                    arr.push(i);
+                }
+                if(arr.length === 0){
+                    document.getElementById("result").innerHTML = "Không có số nguyên dương nào bé hơn n";
+                }else{
+                    document.getElementById("result").innerHTML = "Kêt quả: " + arr.join(",");
+                }
+            }
+        </script>
+    </body>
+</html>

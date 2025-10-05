@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Tính giai thừa</title>
+    </head>
+    <body>
+        <h1>Tính giai thừa của số nguyên dương n</h1>
+        Nhập n:<input type="number" id="n" placeholder="n > 0" width="50">
+        <br>
+        <button onclick="GiaiThua()">Caculate</button>
+        <br>
+        <span id="result"></span>
+        <script>
+            function GiaiThua(){
+                let n = document.getElementById("n").value;
+                let GT=1;
+                for(let i = 1; i <= n;i++){
+                    GT*=i;
+                }
+                document.getElementById("result").innerHTML = "Kết quả: " + GT;
+            }
+        </script>
+    </body>
+</html>

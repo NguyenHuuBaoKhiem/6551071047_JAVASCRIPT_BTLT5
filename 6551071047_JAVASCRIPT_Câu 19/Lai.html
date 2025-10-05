@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Tính lãi suất</title>
+    </head>
+    <body>
+        <h1>Tổng số tiền sau khi đầu tư</h1>
+        Tiền vốn: <input type="text" id="Von" placeholder="Vd: 2,300,000...." width="50">
+        <br>
+        Số năm đầu tư: <input type="number" id="years" width="50">
+        <br>
+        Lãi suất: <input type="text" id="lai">
+        <br>
+        <button onclick="LaiSuat()">Tính tiền</button>
+        <br>
+        <span id="result"></span>
+        <script>
+            function LaiSuat(){
+                const von = document.getElementById("Von").value.trim();
+                const money = parseInt(von.replaceAll(",","").replaceAll(".",""));
+                const years = document.getElementById("years").value;
+                const lai0 = document.getElementById("lai").value.trim();
+                const lai = parseFloat(lai0.replaceAll(",",".").replaceAll("%",""))/100;
+                let LaiDon= money + money*lai*years;
+                let LaiKep= money*Math.pow((1+lai),years);
+                document.getElementById("result").innerHTML=
+                "Lãi đơn: "+Math.round(LaiDon).toLocaleString() + "đ<br>"+"Lãi kép: "+Math.round(LaiKep).toLocaleString() + "đ";
+            }
+        </script>
+    </body>
+</html>

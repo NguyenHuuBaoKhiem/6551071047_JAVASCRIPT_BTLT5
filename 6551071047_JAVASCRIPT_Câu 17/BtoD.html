@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Chuyển nhị phân sang thập phân</title>
+    </head>
+    <body>
+        <h1>Chuyển đổi số nhị phân sang thập phân</h1>
+        Nhập 1 số nhị phân: <input type="text" id = "NhiPhan" placeholder="Vd:0101,0110,..." width="50">
+        <br>
+        <button onclick="conversion()">Chuyển đổi</button>
+        <br>
+        <span id="result"></span>
+        <script>
+            function conversion(){
+                let bi= document.getElementById("NhiPhan").value;
+                let dec=0;
+                let order = 0;
+                for(let i = bi.length-1;i>=0;i--){
+                    if(bi[order]==="1"){
+                        dec+=Math.pow(2,i);
+                    }
+                    order++;
+                }
+                document.getElementById("result").innerHTML = "Sô thập phân:" + dec;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Cau 16</title>
+    </head>
+    <body>
+        <script>
+            function HinhTru(radius,height){
+                this.radius=radius;
+                this.height=height;
+                this.InThongTin = function(){
+                    document.write("<h2>In hinh tru</h2>");
+                    document.write("Ban kinh = "+this.radius+"<br>");
+                    document.write("Chieu cao = "+ this.height+"<br>");
+                }
+                this.DienTich= function(){
+                    document.write("<h3>Sau khi thay doi</h3>");
+                    document.write("Ban kinh = "+this.radius+"<br>");
+                    document.write("Chieu cao = "+ this.height+"<br>");
+                    document.write("Dien tich = "+this.dientich.toFixed(2));
+                }
+                this.dientich= 2*Math.PI*this.radius*this.radius + 2*Math.PI*this.radius*this.height;
+            }
+            let tru = new HinhTru(10,15);
+            tru.InThongTin();
+            tru.height=30;
+            tru.DienTich();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Số mũ</title>
+    </head>
+    <body>
+        Nhập hệ số b: <input type="number" id="heSo" width="30">
+        <br>
+        Nhập só mũ n: <input type="number" id="soMu" width="30">
+        <br>
+        <button onclick="caculate()">Tính b^n</button>
+        <br>
+        <span id="result"></span>
+        <script>
+            function caculate(){
+                let b = document.getElementById("heSo").value;
+                let n = document.getElementById("soMu").value;
+                let c = b**n;
+                document.getElementById("result").innerHTML = "Kết quả = " + c;
+            }
+        </script>
+    </body>
+</html>

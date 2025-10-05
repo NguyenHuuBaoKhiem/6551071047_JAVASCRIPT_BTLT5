@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Reverse</title>
+    </head>
+    <body>
+        <input type="number" id="number" placeholder="Nhập dãy số cần đảo" width="50">
+        <br>
+        <button onclick="reverse()">Reverse</button>
+        <br>
+        <span id="result"></span>
+        <script>
+            function reverse(){
+                let num = document.getElementById("number").value;
+                let reverse = num.split("").reverse().join("");
+                document.getElementById("result").innerHTML = "Số sau khi đảo: " + reverse;
+            }
+        </script>
+    </body>
+</html>
